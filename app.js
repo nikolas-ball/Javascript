@@ -116,3 +116,65 @@ function isValidPassword(password, username) {
 }
 
 // =================================================================
+// find average value in an array of numbers
+function avg(arr) {
+    let total = 0;
+    //loop over each num
+    for(let num of arr){
+        //add then together
+        total += num;
+    }
+    //divide by number of nums
+    let res = total / arr.length;
+    return res;
+}
+// =================================================================
+//write a function called isPangram that checks to see if a given sentence
+//contains every letter of the alphabet.
+
+function isPangram(sentence){
+    let lowerCased = sentence.toLowerCase();
+    for(let char of 'abcdefghijklmnopqrstuvwxyz') {
+        if(lowerCased.indexOf(char) === -1) {
+            return false;
+        }
+    }
+    return true;
+}
+// =================================================================
+//write a getCard() function which returns a random playing card object such as
+// {
+//      value: 'K'
+//      suit: 'clubs'  
+// }
+//pick a random value from:
+//----1,2,3,4,5,6,7,8,9,10,J,Q,K,A
+//pick a random suit from:
+//----clubs, spades, hearts, diamonds
+//return both in an object
+
+function getCard(){
+    const values = ['1','2','3','4','5','6','7','8','9','10','J','Q','K','A'];
+    const valIdx = Math.floor(Math.random() * values.length);
+    const value = values[valIdx];
+
+    const suits = ['clubs', 'spades', 'hearts', 'diamonds'];
+    const suitIdx = Math.floor(Math.random() * suits.length);
+    const suit = suits[suitIdx];
+    return { value: value, suit: suit };
+}
+
+//lets try again 
+
+function pick(arr){
+    //return random element from arr
+    const idx = Math.floor(Math.random() * arr.length);
+    return arr[idx];
+}
+
+function getCard(){
+    const values = ['1','2','3','4','5','6','7','8','9','10','J','Q','K','A'];
+    const suits = ['clubs', 'spades', 'hearts', 'diamonds'];
+    return { value: pick(values), suit: pick(suits) };
+}
+// =================================================================
