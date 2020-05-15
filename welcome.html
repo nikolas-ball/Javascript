@@ -19,26 +19,86 @@ body, html {height: 100%}
   background-position: center;
   background-size: cover;
 }
+
+/*Button*/
+.button {
+    font-size: 36px;
+    color: white;
+    letter-spacing: 2px;
+    position: relative;
+    background-color: transparent;
+    border: 3px solid white;
+    padding: 0;
+    width: 250px;
+    border-radius: 250px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:hover{
+   background:#fff;
+   box-shadow:0px 2px 10px 5px #97B1BF;
+   color:#000;
+}
+
+.arrowRight {
+    font-size: 50px;
+}
+
+.swimmer {
+    font-size: 50px;
+}
 </style>
 <body>
 
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
   <div class="w3-display-topleft w3-padding-large w3-xlarge">
-    Logo
+      <span class="swimmer">
+    🏊
+    </span>
   </div>
   <div class="w3-display-middle">
     <h1 id="greeter" class="w3-jumbo w3-animate-top">Welcome To Pool</h1>
     <h2 id="greeter2" class="w3-jumbo w3-animate-top">Chat with friends, and more.</h2>
-    <button onclick="greetUser()">Say Hi!</button>
-    <p class="w3-large w3-center">35 days left</p>
+    <button id="letUsGo" class="button" onclick="greetUser()">Say Hi!</button>
+    <br />
+    <br />
+    <br />
+    <p id="activeUsers" class="w3-large w3-center"></p>
   </div>
   <div class="w3-display-bottomleft w3-padding-large">
-    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+    Made with ❤️ by <a href="https://github.com/nick-ball" target="_blank">Nick Ball</a>
   </div>
 </div>
 <script>
+    // On DOM ready, this function fires which simulates a live ticker showing active users on the site.
+    // Because of the lack of a proper backend as of the creation of this landing page, the active users
+    // data is just simulated with the function below.
+    document.addEventListener("DOMContentLoaded", function() {
+        function random(min,max) {
+            return Math.floor(Math.random()*(max-min+1)+min);
+        }
+        let initial = random(250, 1000);
+        let count = initial;
+
+        setInterval(function() {
+            let variation = random(-6,3);
+            // set count equal to count plus variation and then refresh every two seconds
+            count += variation
+            document.getElementById("activeUsers").innerHTML = "There are currently " + count + " users on Pool";
+           }, 2000)
+    });
+
     function greetUser() {
         let txt;
+        let arrow = "<span class='arrowRight'>➡️</span>";
         let person = prompt("Please enter your name:", "First & Last");
         if (person == null || person == "") {
             txt = "User cancelled the prompt";
@@ -46,9 +106,9 @@ body, html {height: 100%}
         else {
             document.getElementById("greeter").innerHTML = "Hello " + person + "!";
             document.getElementById("greeter2").innerHTML = "Let's jump right in!";
+            document.getElementById("letUsGo").innerHTML = arrow;
         }
     }
-
 
 </script>
 </body>
