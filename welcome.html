@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Pool</title>
+    <html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAQAAAAAAAAAAIAAABeAAAAsgAAAC8AAAAAAAAAAAAAAC8AAACwAAAAQgAAAAAAAAAAAAAAIwAAAJ0AAADwAAAA5wAAAG8AAADBAAAA/gAAAOIAAAD6AAAAkQAAAJAAAAD6AAAA5AAAAPsAAACEAAAAnQAAAPoAAADtAAAAGAAAAKEAAAD9AAAA0AAAAD0AAAAEAAAAbgAAAO8AAADvAAAAbwAAAAQAAABbAAAA8gAAAOwAAAB7AAAADgAAAAAAAAAAAAAALAAAAAUAAAAdAAAAfQAAAA8AAAAYAAAAGAAAAA8AAAB5AAAADwAAACIAAAAPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAA7AAAAP8AAADnAAAAXgAAAF0AAADnAAAA/wAAAIUAAAAGAAAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHgAAAJkAAAD5AAAA/wAAAP8AAAD/AAAA/wAAANsAAABTAAAA7QAAAPUAAABfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAAJ4AAAD6AAAA/wAAAPcAAAAyAAAAwAAAAP8AAAD/AAAA4gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAAAA0wAAAP8AAABqAAAAAAAAAKIAAAD/AAAA/wAAAMUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAggAAAP8AAADKAAAAAgAAAAAAAAARAAAAjQAAAJcAAAAeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAAD/AAAA/wAAAL8AAAAsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAAAAMgAAAD/AAAA+gAAAHEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAASwAAAMEAAACFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AAAhjAAAAAAAAAAAAADAAwAA4AMAAOABAAD4AAAA/CAAAPwhAAD8HwAA/A8AAP8PAAD//wAA//8AAA==" rel="icon" type="image/x-icon">
+</head>
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+    /* Image free of use by Unsplash */
+  background-image: url('https://images.unsplash.com/photo-1558617320-e695f0d420de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    Logo
+  </div>
+  <div class="w3-display-middle">
+    <h1 id="greeter" class="w3-jumbo w3-animate-top">Welcome To Pool</h1>
+    <h2 id="greeter2" class="w3-jumbo w3-animate-top">Chat with friends, and more.</h2>
+    <button onclick="greetUser()">Say Hi!</button>
+    <p class="w3-large w3-center">35 days left</p>
+  </div>
+  <div class="w3-display-bottomleft w3-padding-large">
+    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+  </div>
+</div>
+<script>
+    function greetUser() {
+        let txt;
+        let person = prompt("Please enter your name:", "First & Last");
+        if (person == null || person == "") {
+            txt = "User cancelled the prompt";
+        }
+        else {
+            document.getElementById("greeter").innerHTML = "Hello " + person + "!";
+            document.getElementById("greeter2").innerHTML = "Let's jump right in!";
+        }
+    }
+
+
+</script>
+</body>
+</html>
