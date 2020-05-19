@@ -190,3 +190,26 @@ function getCard(){
 // )
 
 const square = n => n * n;
+
+//====================================================================
+//fizzbuzz from a function call
+function fizzFix(str){
+    var iterations = Number(str);
+
+    for( var i = 1; i <= iterations; i++){
+        var output = '';
+            if( i % 3 == 0){
+                output += "Fizz";                
+            }
+            if( i % 5 == 0){
+                output += "Buzz";
+            }
+            if(output == ''){
+                output = i;
+            }
+        
+        console.log(output);
+        }
+}
+
+fizzFix('11111');
