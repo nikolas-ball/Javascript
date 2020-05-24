@@ -21,3 +21,12 @@ var fizzBuzzCustom = function(s1 = "Fizz", s2 = "Buzz", n1 = 3, n2 = 5) {
 
 //next challenge
 //
+//
+var array = [1, 2, 3, 4, 5];
+    
+    // Getting sum of numbers
+    var sum = array.reduce(function(a, b){
+        return a + b;
+    }, 0);
+    
+    console.log(sum); // Prints: 15
