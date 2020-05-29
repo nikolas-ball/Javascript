@@ -47,3 +47,16 @@ var countBits = function(n) {
 };
 
 console.log(countBits(1234));
+
+//is Number a repDigit
+function isRepdigit(num) {
+	// return false if a negative number
+	if (num <=0) return false;
+	// return true if a positive single digit number
+	if (num < 10) return true;
+	//Put both digits into an array(will only work on numbers up to 99)
+	const arr = num.toString().split("");
+	if (arr[0] === arr[1])return true;
+	return false;
+	
+}
