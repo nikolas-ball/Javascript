@@ -92,3 +92,22 @@ function test() {
 
 test();
 //end hoisting
+
+
+//run time versus parse time function declaration 
+//Run-Time function declaration 
+//<script>
+foo(); // Calling foo function here will give an Error
+  var foo = function(){ 
+    console.log("Hi I am inside Foo");
+ }; 
+// </script>
+// <script>
+//Parse-Time function declaration 
+bar(); // Calling foo function will not give an Error
+ function bar(){ 
+  console.log("Hi I am inside Foo");
+ }; 
+//</script>
+
+//Another advantage of this first-one way of declaration is that you can declare functions based on certain conditions
