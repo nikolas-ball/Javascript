@@ -83,3 +83,48 @@ let numIslands = function(grid) {
     // The first few lines make sure that it doesn’t go “out of bounds” of the array.
     // The next few lines make sure we don’t continue visiting adjacent squares after we’ve
     // hit a zero. The rest of it is the recursive depth-first search for more “1”‘s to zero out.
+
+
+
+
+
+
+
+
+
+
+
+    //============================================================================================================
+    //arguably better solution
+
+    /**
+     * @param {character[][]} grid
+     * @return {number}
+     */
+
+     const numIslands = (grid) => {
+         let countIslands = 0;
+
+         for(let rowIndex in grid){
+            for(let colIndex in grid[rowIndex]){
+                if(grid[rowIndex][colIndex] === '1'){
+                    countIslands++;
+                    teraform(parseInt(rowIndex), parseInt(colIndex), grid);
+                }
+            }
+         }
+         return countIslands;
+     };
+
+     //convert stuff around us to water
+     const teraform = (rowIn, colIn, grid) => {
+         if(grid[rowIn] === undefined || grid[rowIn][colIn] === undefined || grid[rowIn][colIn] === '0') return;
+
+        grid[rowIn][colIn] = '0';
+
+        //recursion v
+        teraform(rowIn+1, colIn, grid);
+        teraform(rowIn-1, colIn, grid);
+        teraform(rowIn, colIn+1, grid);
+        teraform(rowIn, colIn-1, grid);
+     }
