@@ -140,3 +140,36 @@ function amplify(num) {
 amplify(25);
 //==============================================================================================================
 //https://dev.to/donaldkellett/improving-your-programming-skills-with-codewars-14a1
+//==============================================================================================================
+//binary search tree(to be cont)
+//Binary Search Tree
+var tree;
+function setup() {
+  tree = new Tree();
+  var n = new Node(5);
+  tree.addNode(n);
+  
+  console.log(tree);
+  
+}
+
+function Tree() {
+  this.root = null;
+  
+}
+
+Tree.prototype.addNode = function(n) {
+  if(this.root == null){
+    this.root = n;
+  }
+}
+
+function Node(val) {
+  this.value = val;
+  this.left = null;
+  this.right = null;
+}
+
+
+
+
