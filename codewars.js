@@ -139,3 +139,4 @@ function amplify(num) {
 }
 amplify(25);
 //==============================================================================================================
+//https://dev.to/donaldkellett/improving-your-programming-skills-with-codewars-14a1
