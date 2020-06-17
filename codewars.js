@@ -551,3 +551,19 @@ preloadImages("logo.jpg", "main_bg.jpg", "body_bg.jpg", "header_bg.jpg");
 
 </script>
 //=======================================================================================
+
+/**
+ * Returns a new number with squared digits
+ * Time complexity: O(n), space complexity: O(n)
+ * @param {Number} num an integer
+ * @returns {Number} an integer with squared digits
+ */
+const squareDigits = num => {
+    return +Array.from(num.toString(), n => n * n).join('')
+}
+//Now what in the world is this one doing?
+
+//Array.from() creates a new shallow-copied Array from our input.
+//Inside this method, we convert our number into a String--an iterable object in JS. This allows Array.from() to create an array of string digits.
+//Then, we use the optional mapping argument where we'll square our digits,
+//After, we'll join each digit and convert the String result into a Number using the + operator.
