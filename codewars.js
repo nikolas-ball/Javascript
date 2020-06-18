@@ -1,6 +1,8 @@
 //codewars     nickball
 //edabit       nickball
 
+//add something beneficial everyday.
+
 //"Achieve mastery through challenge"
 //custom fizzbuzz
 var fizzBuzzCustom = function(s1 = "Fizz", s2 = "Buzz", n1 = 3, n2 = 5) {
