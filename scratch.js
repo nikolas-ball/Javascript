@@ -15,3 +15,5 @@ const fizzGame = num => {
         console.log(output);
     }
 }
+
+//more practice 
